@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import "package:flutter_app/NotImplementedScreen.dart";
 import "package:flutter_app/ButtonDelayScreen.dart";
+import "package:flutter_app/VibrationDelayScreen.dart";
 
 class LaunchScreen extends StatelessWidget {
   @override
@@ -86,7 +87,7 @@ class LaunchScreen extends StatelessWidget {
             width: double.infinity,
             child: RaisedButton(
               onPressed: () {
-                _gotoNotImplementedScreen(context);
+                _gotoVibrationDelayScreen(context);
               },
               child: Text("Vibration delay"),
             )),
@@ -105,6 +106,11 @@ class LaunchScreen extends StatelessWidget {
   void _gotoButtonDelayScreen(BuildContext context) {
     Navigator.push(
         context, MaterialPageRoute(builder: (context) => ButtonDelayScreen()));
+  }
+
+  void _gotoVibrationDelayScreen(BuildContext context) {
+    Navigator.push(
+        context, MaterialPageRoute(builder: (context) => VibrationDelayScreen()));
   }
 
   void _gotoNotImplementedScreen(BuildContext context) {
