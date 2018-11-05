@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import "package:flutter_app/NotImplementedScreen.dart";
+import "package:flutter_app/ButtonDelayScreen.dart";
 
 class LaunchScreen extends StatelessWidget {
   @override
@@ -13,7 +15,7 @@ class LaunchScreen extends StatelessWidget {
             child: Column(
               children: <Widget>[
                 _buildAppInfoHeader(),
-                _buildNavigationButtons(),
+                _buildNavigationButtons(context),
               ],
             )),
       ),
@@ -45,50 +47,68 @@ class LaunchScreen extends StatelessWidget {
     );
   }
 
-  Widget _buildNavigationButtons() {
+  Widget _buildNavigationButtons(BuildContext context) {
     return Column(
       children: <Widget>[
         SizedBox(
             width: double.infinity,
             child: RaisedButton(
-              onPressed: _gotoButtonDelayScreen,
+              onPressed: () {
+                _gotoButtonDelayScreen(context);
+              },
               child: Text("Button delay"),
             )),
         SizedBox(
             width: double.infinity,
             child: RaisedButton(
-              onPressed: _gotoNotImplementedScreen,
+              onPressed: () {
+                _gotoNotImplementedScreen(context);
+              },
               child: Text("Local listview"),
             )),
         SizedBox(
             width: double.infinity,
             child: RaisedButton(
-              onPressed: _gotoNotImplementedScreen,
+              onPressed: () {
+                _gotoNotImplementedScreen(context);
+              },
               child: Text("Network listview"),
             )),
         SizedBox(
             width: double.infinity,
             child: RaisedButton(
-              onPressed: _gotoNotImplementedScreen,
+              onPressed: () {
+                _gotoNotImplementedScreen(context);
+              },
               child: Text("Heavy computation"),
             )),
         SizedBox(
             width: double.infinity,
             child: RaisedButton(
-              onPressed: _gotoNotImplementedScreen,
+              onPressed: () {
+                _gotoNotImplementedScreen(context);
+              },
               child: Text("Vibration delay"),
             )),
         SizedBox(
             width: double.infinity,
             child: RaisedButton(
-              onPressed: _gotoNotImplementedScreen,
+              onPressed: () {
+                _gotoNotImplementedScreen(context);
+              },
               child: Text("Third party notices"),
             )),
       ],
     );
   }
 
-  void _gotoButtonDelayScreen() {}
+  void _gotoButtonDelayScreen(BuildContext context) {
+    Navigator.push(
+        context, MaterialPageRoute(builder: (context) => ButtonDelayScreen()));
+  }
 
-  void _gotoNotImplementedScreen() {}
+  void _gotoNotImplementedScreen(BuildContext context) {
+    Navigator.push(context,
+        MaterialPageRoute(builder: (context) => NotImplementedScreen()));
+  }
 }
