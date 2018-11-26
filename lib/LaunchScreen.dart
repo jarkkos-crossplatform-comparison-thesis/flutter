@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import "package:flutter_app/NotImplementedScreen.dart";
 import "package:flutter_app/ButtonDelayScreen.dart";
+import "package:flutter_app/HeavyComputationScreen.dart";
 import "package:flutter_app/VibrationDelayScreen.dart";
 
 class LaunchScreen extends StatelessWidget {
@@ -79,7 +80,7 @@ class LaunchScreen extends StatelessWidget {
             width: double.infinity,
             child: RaisedButton(
               onPressed: () {
-                _gotoNotImplementedScreen(context);
+                _gotoHeavyComputationScreen(context);
               },
               child: Text("Heavy computation"),
             )),
@@ -106,6 +107,10 @@ class LaunchScreen extends StatelessWidget {
   void _gotoButtonDelayScreen(BuildContext context) {
     Navigator.push(
         context, MaterialPageRoute(builder: (context) => ButtonDelayScreen()));
+  }
+
+  void _gotoHeavyComputationScreen(BuildContext context) {
+    Navigator.push(context, MaterialPageRoute(builder: (context) => HeavyComputationScreen()));
   }
 
   void _gotoVibrationDelayScreen(BuildContext context) {
