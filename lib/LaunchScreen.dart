@@ -3,6 +3,8 @@ import "package:flutter_app/NotImplementedScreen.dart";
 import "package:flutter_app/ButtonDelayScreen.dart";
 import "package:flutter_app/HeavyComputationScreen.dart";
 import "package:flutter_app/VibrationDelayScreen.dart";
+import "package:flutter_app/ListDataLoader.dart";
+import "package:flutter_app/ListItemsScreen.dart";
 
 class LaunchScreen extends StatelessWidget {
   @override
@@ -29,7 +31,7 @@ class LaunchScreen extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: <Widget>[
         Image.asset(
-          "images/flutter_logo.png",
+          "assets/images/flutter_logo.png",
           width: 80.0,
           height: 80.0,
         ),
@@ -41,7 +43,7 @@ class LaunchScreen extends StatelessWidget {
           ],
         ),
         Image.asset(
-          "images/flutter_logo.png",
+          "assets/images/flutter_logo.png",
           width: 80.0,
           height: 80.0,
         ),
@@ -64,7 +66,7 @@ class LaunchScreen extends StatelessWidget {
             width: double.infinity,
             child: RaisedButton(
               onPressed: () {
-                _gotoNotImplementedScreen(context);
+                _gotoLocalListItemsScreen(context);
               },
               child: Text("Local listview"),
             )),
@@ -72,7 +74,7 @@ class LaunchScreen extends StatelessWidget {
             width: double.infinity,
             child: RaisedButton(
               onPressed: () {
-                _gotoNotImplementedScreen(context);
+                _gotoNetworkListItemsScreen(context);
               },
               child: Text("Network listview"),
             )),
@@ -116,6 +118,14 @@ class LaunchScreen extends StatelessWidget {
   void _gotoVibrationDelayScreen(BuildContext context) {
     Navigator.push(
         context, MaterialPageRoute(builder: (context) => VibrationDelayScreen()));
+  }
+
+  void _gotoLocalListItemsScreen(BuildContext context) {
+    Navigator.push(context, MaterialPageRoute(builder: (context) => ListItemsScreen(title: "Local listview", dataLoader: LocalDataLoader())));
+  }
+
+  void _gotoNetworkListItemsScreen(BuildContext context) {
+    Navigator.push(context, MaterialPageRoute(builder: (context) => ListItemsScreen(title: "Network listview", dataLoader: NetworkDataLoader())));
   }
 
   void _gotoNotImplementedScreen(BuildContext context) {
