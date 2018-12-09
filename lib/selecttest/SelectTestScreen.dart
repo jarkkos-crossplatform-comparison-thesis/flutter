@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import "package:flutter_app/tapdownbutton/raisedbutton.dart";
 import "package:flutter_app/NoAnimationMaterialPageRoute.dart";
 import "package:flutter_app/NotImplementedScreen.dart";
 import "package:flutter_app/buttonlatency/ButtonLatencyScreen.dart";
@@ -57,7 +58,7 @@ class SelectTestScreen extends StatelessWidget {
       children: <Widget>[
         SizedBox(
             width: double.infinity,
-            child: RaisedButton(
+            child: RaisedButtonTapDown(
               onPressed: () {
                 _gotoButtonDelayScreen(context);
               },
@@ -65,7 +66,7 @@ class SelectTestScreen extends StatelessWidget {
             )),
         SizedBox(
             width: double.infinity,
-            child: RaisedButton(
+            child: RaisedButtonTapDown(
               onPressed: () {
                 _gotoLocalListItemsScreen(context);
               },
@@ -73,7 +74,7 @@ class SelectTestScreen extends StatelessWidget {
             )),
         SizedBox(
             width: double.infinity,
-            child: RaisedButton(
+            child: RaisedButtonTapDown(
               onPressed: () {
                 _gotoNetworkListItemsScreen(context);
               },
@@ -81,7 +82,7 @@ class SelectTestScreen extends StatelessWidget {
             )),
         SizedBox(
             width: double.infinity,
-            child: RaisedButton(
+            child: RaisedButtonTapDown(
               onPressed: () {
                 _gotoHeavyComputationScreen(context);
               },
@@ -89,7 +90,7 @@ class SelectTestScreen extends StatelessWidget {
             )),
         SizedBox(
             width: double.infinity,
-            child: RaisedButton(
+            child: RaisedButtonTapDown(
               onPressed: () {
                 _gotoVibrationDelayScreen(context);
               },
@@ -97,7 +98,7 @@ class SelectTestScreen extends StatelessWidget {
             )),
         SizedBox(
             width: double.infinity,
-            child: RaisedButton(
+            child: RaisedButtonTapDown(
               onPressed: () {
                 _gotoNotImplementedScreen(context);
               },

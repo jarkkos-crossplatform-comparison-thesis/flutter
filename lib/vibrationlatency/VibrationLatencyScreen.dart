@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import "package:flutter_app/tapdownbutton/raisedbutton.dart";
 import 'package:vibrate/vibrate.dart';
 
 class VibrationLatencyScreen extends StatelessWidget {
@@ -35,7 +36,7 @@ class VibrationLatencyScreen extends StatelessWidget {
           // horizontal).
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            RaisedButton(
+            RaisedButtonTapDown(
               onPressed: _vibrateDevice,
               child: Text("Click me!"),
             ),

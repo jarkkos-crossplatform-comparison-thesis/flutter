@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import "package:flutter_app/tapdownbutton/raisedbutton.dart";
 
 class ButtonLatencyScreen extends StatefulWidget {
   @override
@@ -29,7 +30,7 @@ class _ButtonLatencyScreenState extends State<ButtonLatencyScreen> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            RaisedButton(
+            RaisedButtonTapDown(
               onPressed: _incrementCounter,
               child: Text("Click me!"),
             ),

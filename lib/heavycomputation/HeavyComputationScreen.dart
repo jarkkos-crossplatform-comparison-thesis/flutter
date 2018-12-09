@@ -1,5 +1,6 @@
 import 'dart:math';
 
+import "package:flutter_app/tapdownbutton/raisedbutton.dart";
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
@@ -35,7 +36,7 @@ class _HeavyComputationScreenState extends State<HeavyComputationScreen> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            RaisedButton(
+            RaisedButtonTapDown(
               onPressed: _startComputation,
               child: Text("Click me!"),
             ),
