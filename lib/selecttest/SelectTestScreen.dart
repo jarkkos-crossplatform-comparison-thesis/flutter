@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import "package:flutter_app/NoAnimationMaterialPageRoute.dart";
 import "package:flutter_app/NotImplementedScreen.dart";
-import "package:flutter_app/ButtonDelayScreen.dart";
-import "package:flutter_app/HeavyComputationScreen.dart";
-import "package:flutter_app/VibrationDelayScreen.dart";
-import "package:flutter_app/ListDataLoader.dart";
-import "package:flutter_app/ListItemsScreen.dart";
+import "package:flutter_app/buttonlatency/ButtonLatencyScreen.dart";
+import "package:flutter_app/heavycomputation/HeavyComputationScreen.dart";
+import "package:flutter_app/vibrationlatency/VibrationLatencyScreen.dart";
+import "package:flutter_app/listitems/ListDataLoader.dart";
+import "package:flutter_app/listitems/ListItemsScreen.dart";
 
-class LaunchScreen extends StatelessWidget {
+class SelectTestScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
@@ -109,7 +109,7 @@ class LaunchScreen extends StatelessWidget {
 
   void _gotoButtonDelayScreen(BuildContext context) {
     Navigator.push(
-        context, NoAnimationMaterialPageRoute(builder: (context) => ButtonDelayScreen()));
+        context, NoAnimationMaterialPageRoute(builder: (context) => ButtonLatencyScreen()));
   }
 
   void _gotoHeavyComputationScreen(BuildContext context) {
@@ -118,7 +118,7 @@ class LaunchScreen extends StatelessWidget {
 
   void _gotoVibrationDelayScreen(BuildContext context) {
     Navigator.push(
-        context, NoAnimationMaterialPageRoute(builder: (context) => VibrationDelayScreen()));
+        context, NoAnimationMaterialPageRoute(builder: (context) => VibrationLatencyScreen()));
   }
 
   void _gotoLocalListItemsScreen(BuildContext context) {

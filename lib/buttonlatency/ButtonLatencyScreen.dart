@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class ButtonDelayScreen extends StatefulWidget {
+class ButtonLatencyScreen extends StatefulWidget {
   @override
-  _ButtonDelayScreenState createState() => new _ButtonDelayScreenState();
+  _ButtonLatencyScreenState createState() => new _ButtonLatencyScreenState();
 }
 
-class _ButtonDelayScreenState extends State<ButtonDelayScreen> {
+class _ButtonLatencyScreenState extends State<ButtonLatencyScreen> {
   int _counter = 0;
 
   void _incrementCounter() {

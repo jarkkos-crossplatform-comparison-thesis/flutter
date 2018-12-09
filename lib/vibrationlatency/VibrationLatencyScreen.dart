@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:vibrate/vibrate.dart';
 
-class VibrationDelayScreen extends StatelessWidget {
+class VibrationLatencyScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // This method is rerun every time setState is called, for instance as done
