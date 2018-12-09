@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import "package:flutter_app/NoAnimationMaterialPageRoute.dart";
 import "package:flutter_app/NotImplementedScreen.dart";
 import "package:flutter_app/ButtonDelayScreen.dart";
 import "package:flutter_app/HeavyComputationScreen.dart";
@@ -108,28 +109,27 @@ class LaunchScreen extends StatelessWidget {
 
   void _gotoButtonDelayScreen(BuildContext context) {
     Navigator.push(
-        context, MaterialPageRoute(builder: (context) => ButtonDelayScreen()));
+        context, NoAnimationMaterialPageRoute(builder: (context) => ButtonDelayScreen()));
   }
 
   void _gotoHeavyComputationScreen(BuildContext context) {
-    Navigator.push(context, MaterialPageRoute(builder: (context) => HeavyComputationScreen()));
+    Navigator.push(context, NoAnimationMaterialPageRoute(builder: (context) => HeavyComputationScreen()));
   }
 
   void _gotoVibrationDelayScreen(BuildContext context) {
     Navigator.push(
-        context, MaterialPageRoute(builder: (context) => VibrationDelayScreen()));
+        context, NoAnimationMaterialPageRoute(builder: (context) => VibrationDelayScreen()));
   }
 
   void _gotoLocalListItemsScreen(BuildContext context) {
-    Navigator.push(context, MaterialPageRoute(builder: (context) => ListItemsScreen(title: "Local listview", dataLoader: LocalDataLoader())));
+    Navigator.push(context, NoAnimationMaterialPageRoute(builder: (context) => ListItemsScreen(title: "Local listview", dataLoader: LocalDataLoader())));
   }
 
   void _gotoNetworkListItemsScreen(BuildContext context) {
-    Navigator.push(context, MaterialPageRoute(builder: (context) => ListItemsScreen(title: "Network listview", dataLoader: NetworkDataLoader())));
+    Navigator.push(context, NoAnimationMaterialPageRoute(builder: (context) => ListItemsScreen(title: "Network listview", dataLoader: NetworkDataLoader())));
   }
 
   void _gotoNotImplementedScreen(BuildContext context) {
-    Navigator.push(context,
-        MaterialPageRoute(builder: (context) => NotImplementedScreen()));
+    Navigator.push(context, NoAnimationMaterialPageRoute(builder: (context) => NotImplementedScreen()));
   }
 }
