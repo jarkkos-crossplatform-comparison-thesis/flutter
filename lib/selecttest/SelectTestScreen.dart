@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import "package:flutter_app/tapdownbutton/raisedbutton.dart";
 import "package:flutter_app/NoAnimationMaterialPageRoute.dart";
-import "package:flutter_app/NotImplementedScreen.dart";
 import "package:flutter_app/buttonlatency/ButtonLatencyScreen.dart";
 import "package:flutter_app/heavycomputation/HeavyComputationScreen.dart";
 import "package:flutter_app/vibrationlatency/VibrationLatencyScreen.dart";
 import "package:flutter_app/listitems/ListDataLoader.dart";
 import "package:flutter_app/listitems/ListItemsScreen.dart";
+import "package:flutter_app/thirdpartynotices/ThirdPartyNoticesScreen.dart";
 
 class SelectTestScreen extends StatelessWidget {
   @override
@@ -131,6 +131,6 @@ class SelectTestScreen extends StatelessWidget {
   }
 
   void _gotoNotImplementedScreen(BuildContext context) {
-    Navigator.push(context, NoAnimationMaterialPageRoute(builder: (context) => NotImplementedScreen()));
+    Navigator.push(context, NoAnimationMaterialPageRoute(builder: (context) => ThirdPartyNoticesScreen()));
   }
 }
