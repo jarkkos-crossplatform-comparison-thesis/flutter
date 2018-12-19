@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import "package:flutter_app/tapdownbutton/raisedbutton.dart";
 import "package:flutter_app/NoAnimationMaterialPageRoute.dart";
-import "package:flutter_app/NotImplementedScreen.dart";
 import "package:flutter_app/buttonlatency/ButtonLatencyScreen.dart";
 import "package:flutter_app/heavycomputation/HeavyComputationScreen.dart";
+import 'package:flutter_app/thirdpartynotices/ThirdPartyNoticesScreen.dart';
 import "package:flutter_app/vibrationlatency/VibrationLatencyScreen.dart";
 import "package:flutter_app/listitems/ListDataLoader.dart";
 import "package:flutter_app/listitems/ListItemsScreen.dart";
@@ -40,7 +40,7 @@ class SelectTestScreen extends StatelessWidget {
         Column(
           children: <Widget>[
             Text("Flutter"),
-            Text("Version 2"),
+            Text("Version 3"),
             Text("Select Test"),
           ],
         ),
@@ -57,7 +57,7 @@ class SelectTestScreen extends StatelessWidget {
     return Column(
       children: <Widget>[
         Padding(
-          padding: const EdgeInsets.only(top: 8.0),
+          padding: const EdgeInsets.only(top: 16.0),
           child: SizedBox(
               width: 200.0,
               child: RaisedButtonTapDown(
@@ -68,7 +68,7 @@ class SelectTestScreen extends StatelessWidget {
               )),
         ),
         Padding(
-          padding: const EdgeInsets.only(top: 8.0),
+          padding: const EdgeInsets.only(top: 16.0),
           child: SizedBox(
               width: 200.0,
               child: RaisedButtonTapDown(
@@ -79,7 +79,7 @@ class SelectTestScreen extends StatelessWidget {
               )),
         ),
         Padding(
-          padding: const EdgeInsets.only(top: 8.0),
+          padding: const EdgeInsets.only(top: 16.0),
           child: SizedBox(
               width: 200.0,
               child: RaisedButtonTapDown(
@@ -90,7 +90,7 @@ class SelectTestScreen extends StatelessWidget {
               )),
         ),
         Padding(
-          padding: const EdgeInsets.only(top: 8.0),
+          padding: const EdgeInsets.only(top: 16.0),
           child: SizedBox(
               width: 200.0,
               child: RaisedButtonTapDown(
@@ -101,7 +101,7 @@ class SelectTestScreen extends StatelessWidget {
               )),
         ),
         Padding(
-          padding: const EdgeInsets.only(top: 8.0),
+          padding: const EdgeInsets.only(top: 16.0),
           child: SizedBox(
               width: 200.0,
               child: RaisedButtonTapDown(
@@ -112,12 +112,12 @@ class SelectTestScreen extends StatelessWidget {
               )),
         ),
         Padding(
-          padding: const EdgeInsets.only(top: 8.0),
+          padding: const EdgeInsets.only(top: 16.0),
           child: SizedBox(
               width: 200.0,
               child: RaisedButtonTapDown(
                 onPressed: () {
-                  _gotoNotImplementedScreen(context);
+                  _gotoThirdPartyNoticesScreen(context);
                 },
                 child: Text("Third party notices"),
               )),
@@ -163,10 +163,10 @@ class SelectTestScreen extends StatelessWidget {
                 title: "Network listview", dataLoader: NetworkDataLoader())));
   }
 
-  void _gotoNotImplementedScreen(BuildContext context) {
+  void _gotoThirdPartyNoticesScreen(BuildContext context) {
     Navigator.push(
         context,
         NoAnimationMaterialPageRoute(
-            builder: (context) => NotImplementedScreen()));
+            builder: (context) => ThirdPartyNoticesScreen()));
   }
 }
