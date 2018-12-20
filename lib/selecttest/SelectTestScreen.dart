@@ -25,6 +25,11 @@ class SelectTestScreen extends StatelessWidget {
               ],
             )),
       ),
+      bottomNavigationBar: SizedBox(
+        width: double.infinity,
+        height: 12.0,
+        child: DecoratedBox(decoration: BoxDecoration(color: Colors.red)),
+      ),
     );
   }
 
@@ -40,7 +45,7 @@ class SelectTestScreen extends StatelessWidget {
         Column(
           children: <Widget>[
             Text("Flutter"),
-            Text("Version 3"),
+            Text("Version 4"),
             Text("Select Test"),
           ],
         ),

@@ -38,6 +38,11 @@ class _ButtonLatencyScreenState extends State<ButtonLatencyScreen> {
           ],
         ),
       ),
+        bottomNavigationBar: SizedBox(
+        width: double.infinity,
+        height: 12.0,
+        child: DecoratedBox(decoration: BoxDecoration(color: Colors.green)),
+    ),
     );
   }
 }
